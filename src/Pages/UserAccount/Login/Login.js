@@ -81,8 +81,8 @@ const Login = () => {
                     </div>
 
                     <br />
-                    <p>New in Law$Lawyer ? <Link to='/register'>Create an account</Link></p>
-                    <p>Forget password ? <button onClick={resetPassword}>Reset password</button></p>
+                    <p className='text-center mt-4 fw-bold text-secondary'>New in Law$Lawyer ?   <Link to='/register'>Create an account</Link></p>
+                    <p className='text-center fw-bold text-secondary'>Forget password ?   <button onClick={resetPassword}>Reset password</button></p>
                     
                 </form>
 
