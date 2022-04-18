@@ -5,6 +5,8 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { toast, ToastContainer } from 'react-toastify';
 import auth from '../../../firebase.init';
 import 'react-toastify/dist/ReactToastify.css';
+import GoogleLogin from '../SocialAccount/GoogleLogin';
+import SocialAccount from '../SocialAccount/SocialAccount';
 // import SocialAccount from '../SocialAccount/SocialAccount';
 
 
@@ -87,7 +89,8 @@ const Login = () => {
                 </form>
 
             </div>
-            {/* <SocialAccount></SocialAccount> */}
+            <SocialAccount></SocialAccount>
+            {/* <GoogleLogin></GoogleLogin> */}
             <ToastContainer />
         </div>
     );

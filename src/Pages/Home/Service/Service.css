@@ -1,4 +1,22 @@
-.card-design{
+.card-design1,.card-design2{
    border: 1px solid rgba(156, 154, 154, 0.527);
    margin-top: 50px;
 }
+@media only screen and (max-width:576px) {
+   .card-design1,.card-design2{
+      flex-direction: column;
+   }
+   .card-design1 div{
+      order: 1;
+   }
+   .card-design2 div{
+      order: 1;
+   }
+   
+}
+
+/* @media only screen and (min-width: 577px) and (max-width: 992px) {
+   .services-container {
+      grid-template-columns: repeat(2, 1fr);
+   }
+} */

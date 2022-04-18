@@ -12,7 +12,7 @@ const Service = ({service}) => {
             {
                 id===2 
                 ?
-                    <div className='d-flex card-design' >
+                    <div className='d-flex card-design2' >
                         <img src={img} alt="" className='w-50' />
                         <div className='p-5'>
                             <h2>{title}</h2>
@@ -21,7 +21,7 @@ const Service = ({service}) => {
                         </div>
                     </div>
                 :
-                    <div className='d-flex card-design' >
+                    <div className='d-flex card-design1' >
                         <div className='p-5'>
                             <h2>{title}</h2>
                             <p>{description}</p>
