@@ -16,6 +16,7 @@ const Register = () => {
 
     const [passwordError,setPasswordError] = useState('')
     const navigate = useNavigate();
+    let errorText;
 
     const handleSubmit = event =>{
         event.preventDefault();
@@ -31,6 +32,10 @@ const Register = () => {
         else
           setPasswordError("Password didn't match");
 
+    }
+
+    if (error) {
+        errorText = <p className='text-danger'>{error.message}</p>
     }
 
     
@@ -60,6 +65,10 @@ const Register = () => {
                         <br />
                         <input type="password" name="confirm_password" id="" style={{ width: '100%' }} required />
                     </div>
+
+                    {errorText}
+                        
+
                     <div className='d-flex justify-content-center mt-3'>
                         <input type="submit" value="Register" class="btn btn-outline-secondary" />
                     </div>
