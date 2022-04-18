@@ -25,6 +25,9 @@ const Header = () => {
                     >
                         <Nav.Link href="home" className='fs-5 text-design ps-3'>Home</Nav.Link>
                         <Nav.Link href="home#services" className='fs-5 text-design ps-3'>Services</Nav.Link>
+                        <Nav.Link as={Link} to='/blog' className='fs-5 text-design ps-3'>Blog</Nav.Link>
+                        <Nav.Link as={Link} to='/checkout' className='fs-5 text-design ps-3'>Check out</Nav.Link>
+                        <Nav.Link as={Link} to='/about' className='fs-5 text-design ps-3'>About</Nav.Link>
                         
                     </Nav>
                     <Nav>
@@ -32,7 +35,7 @@ const Header = () => {
                             user?
                                 <button onClick={handleSignOut}>Sign out</button>
                             :
-                                <Nav.Link as={Link} to='/login'>Login</Nav.Link>
+                                <Nav.Link as={Link} to='/login' className='fs-5 text-design ps-3' >Login</Nav.Link>
                         }
                         
                     </Nav>
