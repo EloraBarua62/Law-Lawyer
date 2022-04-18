@@ -1,12 +1,21 @@
+import { signOut } from 'firebase/auth';
 import React from 'react';
-import { Container, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar, NavLink} from 'react-bootstrap';
+import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
+import auth from '../../../firebase.init';
+import './Header.css'
 
 const Header = () => {
+    const [user, loading, error] = useAuthState(auth);
+    const handleSignOut = () => {
+        signOut(auth);
+    }
+
     return (
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg" className='sticky-top' >
             <Container fluid>
-                <Navbar.Brand as={Link} to="/">Law&Lawer</Navbar.Brand>
+                <Navbar.Brand as={Link} to="/" className='fs-2 fw-bold ps-2'>Law<span className='text-secondary'>&</span>Lawyer</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll" />
                 <Navbar.Collapse id="navbarScroll">
                     <Nav
@@ -14,8 +23,17 @@ const Header = () => {
                         style={{ maxHeight: '100px' }}
                         navbarScroll
                     >
-                        <Nav.Link href="home">Home</Nav.Link>
-                        <Nav.Link href="home#services">Services</Nav.Link>
+                        <Nav.Link href="home" className='fs-5 text-design ps-3'>Home</Nav.Link>
+                        <Nav.Link href="home#services" className='fs-5 text-design ps-3'>Services</Nav.Link>
+                        
+                    </Nav>
+                    <Nav>
+                        {
+                            user?
+                                <button onClick={handleSignOut}>Sign out</button>
+                            :
+                                <Nav.Link as={Link} to='/login'>Login</Nav.Link>
+                        }
                         
                     </Nav>
                     

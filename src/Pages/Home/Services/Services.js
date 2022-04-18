@@ -27,7 +27,7 @@ const Services = () => {
         <div id="services" className='container services-design'>
             <h1 className='fw-bolder text-secondary'>I Provide</h1>
             <div className='bg-secondary' style={{height:'2px'}}></div>
-            <div className='fw-bolder'>
+            <div className='fw-bolder text-secondary'>
                 {
                     services.map(service =>
                         <Service

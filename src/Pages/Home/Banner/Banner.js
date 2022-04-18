@@ -11,6 +11,7 @@ const Banner = () => {
             }}>
                 <h1 className='fw-bold'>Trust 
                     <br />
+                    
                     Strong
                 </h1>
                 <h4 className='fw-bold pt-2'>Expertise with care and empathy</h4>

@@ -12,16 +12,16 @@ const Service = ({service}) => {
                     <div className='d-flex card-design' >
                         <img src={img} alt="" className='w-50' />
                         <div className='p-5'>
-                            <h3>{title}</h3>
-                            <p className='text-secondary '>{description}</p>
+                            <h2>{title}</h2>
+                            <p>{description}</p>
                             <Button variant="outline-secondary">Click here</Button>
                         </div>
                     </div>
                 :
                     <div className='d-flex card-design' >
                         <div className='p-5'>
-                            <h3>{title}</h3>
-                            <p className='text-secondary '>{description}</p>
+                            <h2>{title}</h2>
+                            <p>{description}</p>
                             <Button variant="outline-secondary">Click here</Button>
                         </div>
                         <img src={img} alt="" className='w-50' />
