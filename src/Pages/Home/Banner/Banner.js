@@ -14,7 +14,7 @@ const Banner = () => {
                     
                     Strong
                 </h1>
-                <h4 className='fw-bold pt-2'>Expertise with care and empathy</h4>
+                <h4 className='fw-bold pt-2'>Expertise with care and empathy.</h4>
                 
             </div>
         </div>

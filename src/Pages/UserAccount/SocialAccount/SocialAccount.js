@@ -9,7 +9,9 @@ const SocialAccount = () => {
     const navigate = useNavigate();
 
     if (user)
+    {
         navigate('/')
+    }    
     return (
         <div className='w-50 mx-auto my-5'>
             <div className='d-flex justify-content-center align-items-center px-5'>
