@@ -35,7 +35,7 @@ function App() {
             </RequireAuth>        
           }></Route>
                
-         <Route path='/blog' element={<Blog></Blog>}></Route>
+         {/* <Route path='/blog' element={<Blog></Blog>}></Route> */}
          <Route path='/about' element={<About></About>}></Route>
          <Route path='*' element={<NotFound></NotFound>}></Route>
         
